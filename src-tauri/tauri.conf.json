@@ -1,0 +1,45 @@
+{
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build",
+    "devPath": "http://localhost:1420",
+    "distDir": "../dist"
+  },
+  "package": {
+    "productName": "qr-create",
+    "version": "0.0.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": false,
+      "shell": {
+        "all": false,
+        "open": true
+      }
+    },
+    "bundle": {
+      "active": true,
+      "targets": "all",
+      "identifier": "com.qr-create.dev",
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/256x256.png",
+        "icons/app.icns",
+        "icons/icon.ico"
+      ]
+    },
+    "security": {
+      "csp": null
+    },
+    "windows": [
+      {
+        "fullscreen": false,
+        "resizable": true,
+        "title": "qr-create",
+        "width": 600,
+        "height": 700
+      }
+    ]
+  }
+}
